@@ -1,0 +1,268 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    font-family: "Source Sans Pro", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url("../../assets/fonts/SourceSansPro/SourceSansPro-Light.ttf");
+}
+
+button, input[type="submit"]
+{
+    padding: 10px 30px;
+    margin-bottom: 30px;
+    border-radius: 100px;
+    text-transform: uppercase;
+    border: 1px solid rgba(0, 0, 0, 0.295);
+    background-color: transparent;
+    display: inline-block;
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+button:hover, input[type="submit"]:hover
+{
+    border-color: rgb(0, 133, 133);
+    color: rgb(0, 136, 136);
+}
+.text-contain
+{
+    padding: 0 10%;
+    align-self: center;
+}
+h1
+{
+    font-size: 3rem;
+    font-weight: 500;
+    margin-top: 30px;
+}
+h3
+{
+    margin-top: 30px;
+    font-size: 2rem;
+    font-weight: 400;
+}
+p
+{
+    line-height: 150%;
+    margin: 30px 0;
+}
+.run-container .run-contain-1, .run-container .run-contain-2
+{
+    box-shadow: inset 0 1px 4px rgba(0, 0, 0, 0.100);
+}
+
+
+
+.main-header
+{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    min-height: 100vh;
+}
+
+.main-header .right
+{
+    background: url("../../assets/img/banner.jpg") center/cover;
+}
+
+/* ----------------------------- */
+
+.run-container
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.run-container .run-contain-1
+{
+    display: grid;
+    grid-template-columns: 1fr 63%;
+    min-height: 400px;
+}
+.run-container .run-contain-1 .img
+{
+    background: url("../../assets/img/img-left.jpg") center/cover;
+}
+.run-container .run-contain-2
+{
+    display: grid;
+    grid-template-columns: 65% 1fr;
+    min-height: 400px;
+}
+.run-container .run-contain-2 .img
+{
+    background: url("../../assets/img/img-right.jpg") center/cover;
+}
+
+/* ----------------------------- */
+
+.article-form-container
+{
+    margin-top: 100px;
+}
+
+.article-form-container .form-contain
+{
+    text-align: center;
+    max-width: 900px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.article-form-container .form-grid
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+    "name email"
+    "message message";
+    column-gap: 20px;
+}
+.article-form-container .name-contain
+{
+    grid-area: name;
+}
+.article-form-container .email-contain
+{
+    grid-area: email;
+}
+.article-form-container .textarea-contain
+{
+    grid-area: message;
+}
+
+.article-form-container .contain
+{
+    display: flex;
+    flex-direction: column;
+}
+
+.article-form-container form
+{
+    margin: 25px 0;
+}
+
+.article-form-container textarea
+{
+    height: 180px;
+}
+
+.article-form-container input[type="text"],
+.article-form-container input[type="email"],
+.article-form-container textarea
+{
+    padding: 10px;
+    width: 100%;
+    margin: 10px 0 30px;
+    border: 1px solid rgba(0, 0, 0, 0.100);
+    outline: none;
+    border-radius: 10px;
+    resize: none;
+
+    transition: 0.5s ease-in-out;
+}
+
+.article-form-container input[type="text"]:focus,
+.article-form-container input[type="email"]:focus,
+.article-form-container textarea:focus
+{
+    border: 1px solid rgba(0, 0, 0, 0.323);
+    border-radius: 20px;
+}
+
+.article-form-container label
+{
+    font-size: 1.2rem;
+}
+
+/* ----------------------------- */
+
+footer
+{
+    position: relative;
+
+    padding: 50px 0;
+}
+
+footer::before
+{
+    position: absolute;
+    content: '';
+    width: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    max-width: 500px;
+    background-color: rgba(0, 0, 0, 0.418);
+    height: 1px;
+    top: 0;
+}
+
+footer ul
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    max-width: 500px;
+    margin: 0 auto;
+
+    list-style: none;
+}
+
+footer li a
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 1.4rem;
+    border: 1px solid black;
+    color: black;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+i
+{
+    transition: 0.4s ease-in-out;
+}
+a
+{
+    transition: 0.2s ease-in-out;
+}
+footer li a:hover > i
+{
+    transform: scale(1.1);
+    color: rgb(0, 66, 97);
+}
+footer li a:hover
+{
+    transform: scale(0.9);
+    border-color: rgb(0, 66, 97);
+}
+
+@media screen and (max-width: 700px) {
+    .main-header
+    {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    .run-container .run-contain-1, .run-container .run-contain-2
+    {
+        display: block;
+        min-height: auto;
+    }
+
+    footer li a
+    {
+        font-size: 1rem;
+        width: 35px;
+        height: 35px;
+    }
+}
